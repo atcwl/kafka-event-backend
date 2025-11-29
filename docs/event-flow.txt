@@ -1,0 +1,1 @@
+FastAPI -> Kafka (llm.requests) -> LLM Worker -> Kafka (llm.responses) -> DB

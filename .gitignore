@@ -1,0 +1,84 @@
+# --------------------
+# Python cache files
+# --------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pkl
+
+# Byte-compiled / optimized / DLL files
+*.so
+*.dll
+*.dylib
+
+# --------------------
+# Virtual environments
+# --------------------
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+
+# --------------------
+# Environment files
+# --------------------
+*.env
+.env.*
+!.env.example
+
+# --------------------
+# Logs
+# --------------------
+*.log
+logs/
+log/
+
+# --------------------
+# Coverage & test artifacts
+# --------------------
+.coverage
+coverage/
+htmlcov/
+pytest_cache/
+
+# --------------------
+# Build & packaging
+# --------------------
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# --------------------
+# Editor/IDE folders
+# --------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+*.iml
+
+# --------------------
+# OS-specific files
+# --------------------
+.DS_Store
+Thumbs.db
+
+# --------------------
+# Docker files
+# --------------------
+docker/*.pid
+docker/*.bak
+
+# --------------------
+# Project specific
+# --------------------
+# Cache for Kafka messages (if any false writes occur)
+kafka-offsets/
+kafka-logs/
+
+# Temporary scratch files
+tmp/
+temp/

@@ -1,0 +1,4 @@
+1. Worker receives message
+2. Runs LLM inference
+3. Handles result (DB or pipeline)
+4. Logs status
