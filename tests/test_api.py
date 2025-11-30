@@ -3,6 +3,6 @@ from app.main import app
 
 client = TestClient(app)
 
-def test_process_endpoint():
-    response = client.post("/process", json={"text": "hello"})
-    assert response.status_code == 200
+def test_process():
+    r = client.post("/process", json={"prompt": "hello"})
+    assert r.status_code == 200
