@@ -1,4 +1,6 @@
 from pydantic import BaseModel
 
-class LLMRequest(BaseModel):
-    text: str
+class ProcessRequest(BaseModel):
+    provider: str
+    model: str
+    prompt: str
