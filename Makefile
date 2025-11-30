@@ -1,11 +1,10 @@
+.PHONY: run build worker
+
 run:
-	uvicorn app.main:app --reload
+	docker compose -f docker-compose.yml up --build
 
 worker:
-	python -m app.workers.run_worker
+	python workers/run_worker.py
 
-docker-up:
-	docker compose up --build
-
-docker-down:
-	docker compose down
+build:
+	docker compose -f docker-compose.yml build
