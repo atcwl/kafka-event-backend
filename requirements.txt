@@ -1,7 +1,9 @@
 fastapi
-uvicorn
+uvicorn[standard]
 aiokafka
-pydantic
-openai
+redis
 python-dotenv
-
+groq
+openai
+pydantic
+pydantic-settings

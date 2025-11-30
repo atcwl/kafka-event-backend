@@ -1,8 +1,9 @@
 import logging
 
-logging.basicConfig(
-    level=logging.INFO,
-    format="[%(asctime)s] %(levelname)s - %(message)s"
-)
+logger = logging.getLogger("app")
+logger.setLevel(logging.INFO)
 
-logger = logging.getLogger("backend")
+handler = logging.StreamHandler()
+handler.setFormatter(logging.Formatter("[%(asctime)s] %(levelname)s - %(message)s"))
+
+logger.addHandler(handler)
