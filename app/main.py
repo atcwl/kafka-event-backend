@@ -1,10 +1,13 @@
 from fastapi import FastAPI
-from app.api.routes import router
+import asyncio
 
-app = FastAPI(title="Kafka LLM Backend")
+from app.api.routes import router
+from app.core.response_consumer import kafka_response_listener
+
+app = FastAPI()
+
+@app.on_event("startup")
+async def startup():
+    asyncio.create_task(kafka_response_listener())
 
 app.include_router(router)
-
-@app.get("/")
-def root():
-    return {"message": "Kafka LLM Backend Running"}
